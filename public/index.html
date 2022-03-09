@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+    <script src="/script/color.js" type="text/javascript"></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body class="linear-grad">
+    <div class="container hello-container">
+      <div class="row">
+        <div class="col-12 hello">&lt;HELLO/&gt;</div>
+      </div>
+    </div>
+
+    <div class="container hideme-nav" id="main-container">
+      <div class="row">
+        <div class="col-6 col-content-1 left-nav-bar">
+          <a>PORTFOILO</a>
+        </div>
+        <div class="col-6 col-content-2 right-nav-bar topnav" id="myTopnav">
+          <a href="#project-container" class="active">PROJECTS</a>
+          <a href="#news">WORK EX</a>
+          <a href="#contact">RESUME</a>
+          <a href="#about">CONNECT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-6">
+          <div class="image-crop">
+            <img class="profile-photo" src="/assets /profile.jpeg" />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="main-heading hideme-portfolio">
+              I am Sharad <span> Dabhi</span>
+            </div>
+          </div>
+          <div class="row hideme-portfolio">
+            <p class="main-content">
+              Software developers invent the technologies we sometimes take for
+              granted. For instance, that app that rings, sings or buzzes you
+              out of a deep sleep every morning? A software developer helped
+              design that. And when you roll into the office and turn on your
+              computer, clicking and scrolling through social media, music and
+              your personal calendar – software developers had a big hand in
+              shaping those, too. You might spend your lunch shopping, and
+              before you make that big purchase, you check your bank account
+              balance using your phone. Later, you're cooking a new recipe from
+              that great app your friend told you about. As you look over the
+              course of your day, you come to see that software developers are
+              the masterminds behind the technologies you now can't imagine
+              living without.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="project-heading" id="project-container">PROJECTS</p>
+    </div>
+
+    <div class="container project">
+      <div class="row no-gutters">
+        <div class="col-4">
+          <div class="card card-center card-left">
+            <div id="card-in">
+              <img
+                class="card-img-top"
+                src="/assets /project1.gif"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text-title">Kathputli - Web Application</p>
+                <p class="card-text">
+                  Developed a snake and apple game that uses 3D-Facemesh to map
+                  head movements to snake movements.
+                </p>
+                <p class="card-text-techused">Technologies Used</p>
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /reactjs.svg" alt="" />
+                <!-- <p id="card-tech-text">React</p> -->
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /javascript.svg" alt="" />
+                <!-- <p id="card-tech-text">JS</p> -->
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /bootstrap.svg" alt="" />
+                <!-- <p id="card-tech-text">Bootstrap</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card card-center">
+            <div id="card-in">
+              <img
+                class="card-img-top"
+                src="/assets /breakout-game.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="card-text-title">Breakout Game using Deep Learning</p>
+                <p class="card-text">
+                  Integrated ‘Breakout Game’ on a web app for implementing head
+                  movement tracking using REST API and Deep Learning
+                  Technologies.
+                </p>
+                <p class="card-text-techused">Technologies Used</p>
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /reactjs.svg" alt="" />
+                <!-- <p id="card-tech-text">React</p> -->
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /javascript.svg" alt="" />
+                <!-- <p id="card-tech-text">JS</p> -->
+              </div>
+              <div id="card-tech">
+                <img class="card-icon" src="/assets /bootstrap.svg" alt="" />
+                <!-- <p id="card-tech-text">Bootstrap</p> -->
+              </div>
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-center card-right">
+                <div id="card-in">
+                  <img
+                    class="card-img-top"
+                    src="/assets /sort.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <p class="card-text-title"> Sorting and Searching Visualizer</p>
+                    <p class="card-text">
+                        Built a robust ReactJS/Redux web application for visualizing sorting and searching algorithms.
+                        Implemented Merge Sort, Bubble Sort, and Binary Search algorithms.
+                    </p>
+                    <p class="card-text-techused">Technologies Used</p>
+                  </div>
+                  <div id="card-tech">
+                    <img class="card-icon" src="/assets /reactjs.svg" alt="" />
+                    <!-- <p id="card-tech-text">React</p> -->
+                  </div>
+                  <div id="card-tech">
+                    <img class="card-icon" src="/assets /javascript.svg" alt="" />
+                    <!-- <p id="card-tech-text">JS</p> -->
+                  </div>
+                  <div id="card-tech">
+                    <img class="card-icon" src="/assets /bootstrap.svg" alt="" />
+                    <!-- <p id="card-tech-text">Bootstrap</p> -->
+                  </div>
+                  <img
+                    class="card-icon"
+                    src="/assets /primary-javascript.svg"
+                    alt=""
+                  />
+                  <img
+                    class="card-icon"
+                    src="/assets /primary-javascript.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row row-2 no-gutters">
+        <div class="col-4">
+          <div class="card card-center card-left">
+            <img
+              class="card-img-top"
+              src="/assets /dlib.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p class="card-text">Cursor Control Using Head Movements</p>
+              <p class="card-text">
+                • Designed and developed a windows software for mapping head
+                movements to cursor movements.
+              </p>
+            </div>
+            <div class="card-body">
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card card-center">
+            <img
+              class="card-img-top"
+              src="/assets /iot.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p class="card-text">Ampere: E-commerce website</p>
+              <p class="card-text">
+                • Developed a highly responsive e-commerce website using media
+                queries to support several window sizes.
+              </p>
+            </div>
+            <div class="card-body">
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card card-center card-right">
+            <img
+              class="card-img-top"
+              src="/assets /project1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Smart water tap using rpi and android application
+              </p>
+              <p class="card-text">
+                • Designed a Smart water tap which is operated using Android
+                application.
+              </p>
+            </div>
+            <div class="card-body">
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+              <img
+                class="card-icon"
+                src="/assets /primary-javascript.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <p class="heading-work" >WORK EX</p>
+      </div>
+
+    <div class="container work-ex-container">
+      <div class="row">
+        <div class="col-3">
+          <img id="workex-img" src="/assets /cyborn.jpg" alt="" />
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <p class="heading-work-ex">Machine Learning/Deep Learning Intern</p>
+            <p class="period-work-ex">Jul 2020 - Sep 2020</p>
+          </div>
+          <div class="row">
+            <p class="info-work-ex">
+              • Led a team of two developers for integrating classic 'Breakout
+              Game' on web-app. • Designed and developed a JavaScript function
+              to capture blob images on the client-side and send them to the
+              server (GCP) using REST API to handle multiple user requests. •
+              Built a Convolutional Neural Network model to identify directional
+              faces with an accuracy of 95% and reduced the network bandwidth
+              utilization by 60% through optimizing the data (blob images) on
+              the client-side. • Designed windows software using Python and Dlib
+              for mapping head movements to cursor movements. • Implemented
+              Least Recently Used Caching (LRU) data structure for optimizing
+              and predicting the cursor movements. • Designed the GUI using
+              Tkinter and developed the application with agile methodology using
+              JIRA and Git.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading-tech"><p class="tech-heading">TECH STACK</p></div>
+
+    <div class="container tech-container">
+      <div class="row row-tech-1">
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-tech-2">
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="tech-icon">
+            <img class="tech-icon" src="/assets /react.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading-timeline"><p class="work-heading">TIME LINE</p></div>
+
+    <div class="container container-timeline">
+      <div class="row">
+        <div class="col">
+          <div class="timeline">
+            <div class="timeline-container left">
+              <div class="content">
+                <h4>
+                  <img class="timeline-img" src="/assets /sdsu.jpg" alt="" />
+                  Aug 2021 - May 2023
+                </h4>
+                <p>Master's Degree, Computer Science</p>
+              </div>
+            </div>
+            <div class="timeline-container right">
+              <div class="content">
+                <h4>
+                  <img class="timeline-img" src="/assets /tsec.jpg" alt="" />
+                  Aug 2021 - May 2023
+                </h4>
+                <p>
+                  Thadomal Shahani Engineering College BE, Information
+                  Technology
+                </p>
+              </div>
+            </div>
+            <div class="timeline-container left">
+              <div class="content">
+                <h4>
+                  <img class="timeline-img" src="/assets /tp.jpg" alt="" />
+                  Aug 2021 - May 2023
+                </h4>
+                <p>Master's Degree, Computer Science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
