@@ -2,8 +2,8 @@ html,
 body {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
-
 
 .linear-grad {
   background: linear-gradient(
@@ -14,8 +14,9 @@ body {
     black 100%
   );
 }
+
 .hello-container {
-  height: 100%;
+  height: 100vh;
 }
 .hello {
   margin: 0px auto;
@@ -24,14 +25,18 @@ body {
   font-size: 150px;
   color: black;
   margin-top: 25%;
-
   text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255),
     1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
 }
 .col-content-1 {
   color: white;
 }
-
+#explore {
+  font-size: 3rem;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
 .main-container {
   padding-top: 15%;
   padding-bottom: 20%;
@@ -39,11 +44,9 @@ body {
 .left-nav-bar {
   display: block;
   padding: 14px 16px;
-
   text-align: center;
   font-size: 30px;
   overflow: hidden;
-
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
@@ -77,11 +80,6 @@ body {
   color: black;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  color: rgb(0, 0, 0);
-}
-
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
@@ -89,19 +87,21 @@ body {
 
 /*2nd page*/
 .profile-photo {
+  margin-left: 100px;
+  z-index: -1;
   display: block;
-  margin: auto;
 }
-
+/* 
 .image-crop {
   width: 400px;
   height: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-}
+} */
 
 .profile {
+  margin-left: 100px;
   display: inline;
   margin-top: 500%;
   height: 100%;
@@ -110,7 +110,6 @@ body {
 .main-heading {
   padding-left: 50px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
   font-size: 80px;
 }
 .main-heading > span {
@@ -120,43 +119,48 @@ body {
 
 .main-content {
   padding-left: 50px;
-
   text-align: justify;
 }
 
+#main-text {
+  color: black;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
 /*project*/
-.project-heading {
-    padding-left: 5%;
-
+.project-heading,
+.heading-work,
+.tech-heading,
+.timeline-heading-name {
+  opacity: 0;
+  padding-left: 5%;
   display: inline-block;
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(255, 255, 255);
   font-size: 7rem;
 }
-.heading-work {
-    padding-left: 5%;
 
-  display: inline-block;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 7rem;
-}
 .project {
   padding-top: 5%;
 }
-/* .col-4 {
-  height: 100vh;
-  display: inline-block;
-} */
-.card {
 
+.card {
+  /* filter: grayscale(); */
   height: 100%;
   width: 350px;
   border: none !important;
+  margin: 0 auto;
 }
-
+#card-in:hover {
+  /* padding: 10px; */
+  transition: 250ms;
+  box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px; /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+}
 .card-left {
   float: right;
 }
@@ -165,43 +169,48 @@ body {
   float: left;
 }
 #card-in {
+  display: flex;
+  flex-direction: column;
   border-radius: 1%;
   border: 1px solid rgba(255, 255, 255, 0.445);
   background-color: black;
   padding: 13px;
   height: 100%;
 }
-.card-center {
-  margin: 0 auto;
-}
+
 .card-img-top {
   width: 100%;
   height: 250px;
   object-fit: fill;
 }
+.card:hover {
+  transform: scale(1.01);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
 .card-body {
   padding: 0%;
   font-size: 0.9rem;
-  text-align: justify;
   background-color: #000000;
   color: white;
-  /* color: wheat; */
 }
-.card-text{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+.card-text {
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .card-text-title {
-    color: #bcf48b;
+  color: #bcf48b;
   font-size: 1.25rem;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .card-text-techused {
-    color: #bcf48b;
+  color: #bcf48b;
   font-size: 0.9rem;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -211,7 +220,7 @@ body {
   float: left;
 }
 #card-tech-text {
-    color: white;
+  color: white;
   text-align: center;
 }
 .card-icon {
@@ -220,30 +229,39 @@ body {
 .row-2 {
   margin-top: 5%;
 }
-.heading-work {
+.heading-work,
+.heading-timeline,
+.container-timeline,
+.heading-tech,
+.tech-container,
+.row-tech-2 {
   margin-top: 10%;
 }
-.work-heading {
-  margin: 0 auto;
-  width: 50%;
-  text-align: center;
+.workdiv,
+.techdiv,
+.timelinediv {
+  height: 100vh;
+}
 
-  background-color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: black;
-  font-size: 50px;
+.tech-icon:hover {
+  transition: transform 250ms;
+  transform: translateY(-10px);
+  padding: 10px;
+  /* border: 1px solid white; */
 }
 #workex-img {
-  width: 150px;
+  margin: auto;
+  display: block;
+  width: 200px;
 }
 .heading-work-ex {
-    height: 100%;
+  height: 100%;
   background-color: #000000;
   font-size: 40px;
   color: white;
 }
 .work-ex-container {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .period-work-ex {
@@ -257,17 +275,13 @@ body {
   background-color: black;
 }
 
-.heading-timeline {
-  margin-top: 10%;
-}
-
-.container-timeline {
-  margin-top: 10%;
-}
 .timeline-img {
   width: 100px;
 }
-/* The actual timeline (the vertical ruler) */
+
+.timeline-text {
+  text-align: center;
+}
 .timeline {
   position: relative;
   max-width: 1100px;
@@ -278,7 +292,7 @@ body {
 .timeline::after {
   content: "";
   position: absolute;
-  width: 6px;
+  width: 2px;
   background-color: white;
   top: 0;
   bottom: 0;
@@ -392,34 +406,35 @@ body {
   }
 }
 
-.heading-tech {
-  margin-top: 10%;
-}
-
-.tech-heading {
-  margin: 0 auto;
-  width: 50%;
-  text-align: center;
-
-  background-color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: black;
-  font-size: 50px;
-}
-
-.tech-container {
-  margin-top: 10%;
-}
 .tech-icon {
   border-radius: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
-
   width: 100px;
 }
 
-.row-tech-2 {
-  margin-top: 10%;
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.project:hover .col-4 {
+  filter: blur(1px);
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+  transition: 0.5s;
+}
+.project:hover .col-4:hover {
+  transform: scale(1.01);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
 }

@@ -1,81 +1,76 @@
-const [red, green, blue] = [69, 111, 225];
-const b = 0;
-let flag = true;
+function animate_heading(id) {
+  if (
+    document.getElementById(id).getBoundingClientRect().bottom <=
+    window.innerHeight
+  ) {
+    var element = document.getElementById(id);
 
-window.addEventListener("scroll", () => {
-  let y = 1 + (window.scrollY || window.pageYOffset) / 150;
+    document.body.style.backgroundImage = `linear-gradient(to right,black,black)`;
+    element.classList.add("animate__animated", "animate__fadeInUp");
+    element.style.opacity = 1;
+  }
+}
 
-  y = y < 1 ? 1 : y;
+$(document).ready(function () {
+  let flag = true;
+  let height = window.innerHeight;
+  height = height / 2;
 
-  v = (255 * y) / 5;
-  document.body.onscroll = function () {
-    if (
-      document.getElementById("project-container").getBoundingClientRect()
-        .bottom <= window.innerHeight
-    ) {
-      document.body.style.backgroundImage = `linear-gradient(to right,black,black)`;
-      //   document.body.onscroll = "";
-      //   console.log(y * 5);
-      //   document.body.style.backgroundImage = `linear-gradient(to right,black 0% ,black ${
-      //     y * 6
-      //   }%, white ${y * 6}%, white 100%)`;
-    } else {
+  window.addEventListener("scroll", () => {
+    let y = 1 + (window.scrollY || window.pageYOffset) / 300;
+    y = y < 1 ? 1 : y;
+    v = (255 * y) / 5;
+
+    document.body.onscroll = function () {
+      animate_heading("project-container");
+      animate_heading("heading-work");
+      animate_heading("tech-heading");
+      animate_heading("timeline-heading");
+
       if (flag) {
-        // console.log(v-150, 300-v);
         document.body.style.backgroundImage = `linear-gradient(to right,white 0% ,white ${v}%, black ${v}%, black 100%)`;
-        if (v > 250) {
+
+        if (v > 100) {
+          document.getElementById(
+            "main-text"
+          ).style.backgroundImage = `linear-gradient(to right,white 0%,white ${
+            v - 200
+          }%,black ${v - 130}%, black 100%)`;
+
           flag = false;
         }
       } else if (!flag) {
-        // console.log(v - 255, v);
         document.body.style.backgroundImage = `linear-gradient(to right,black 0% ,black ${
-          v - 255
-        }%, white ${v - 255}%, white 100%)`;
-        if (v < 250) {
+          v - 155
+        }%, white ${v - 155}%, white 100%)`;
+
+        if (v - 155 > 55) {
+          document.getElementById(
+            "main-text"
+          ).style.backgroundImage = `linear-gradient(to right,white 0%,white ${
+            v - 200
+          }%,black ${v - 150}%, black 100%)`;
+
+          document.getElementById(
+            "name"
+          ).style.backgroundImage = `linear-gradient(to right,white 0%,white ${
+            v - 200
+          }%,black ${v - 150}%, black 100%)`;
+        } else {
+          document.getElementById(
+            "main-text"
+          ).style.backgroundImage = `linear-gradient(to right,black,black )`;
+        }
+        if (v < 155) {
           flag = true;
         }
       }
-    }
-  };
+    };
+  });
 
-  //   if (v >200){
-  //      if (flag) {
-  //     // console.log(v-150, 300-v);
-  //     document.body.style.backgroundImage = `linear-gradient(to right,white 0% ,white ${v-150}%, black ${v-150}%, black 100%)`;
-  //     if (v > 250) {
-  //       flag = false;
-  //     }
-  //   } else if (!flag) {
-  //     // console.log(v - 255, v);
-  //     document.body.style.backgroundImage = `linear-gradient(to right,black 0% ,black ${v - 255}%, white ${v - 255}%, white 100%)`;
-  //     if (v < 250) {
-  //       flag = true;
-  //     }
-  //   }
-  //   }
-
-  //   v=v-128+50
-  const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+  $(window).scroll(function () {
+    $(".hello").css("opacity", 1 - $(window).scrollTop() / 500);
+    $(".hideme-nav").css("opacity", ($(window).scrollTop() / 400) * 1);
+    $(".hideme-portfolio").css("opacity", $(window).scrollTop() / 1000);
+  });
 });
-
-$(window).scroll(function () {
-  $(".hello").css("opacity", 1 - $(window).scrollTop() / 500);
-  $(".hideme-nav").css("opacity", ($(window).scrollTop() / 400) * 1);
-  $(".hideme-portfolio").css("opacity", $(window).scrollTop() / 1000);
-});
-
-// $(document).ready(function () {
-//   /* Every time the window is scrolled ... */
-//   $(window).scroll(function () {
-//     /* Check the location of each desired element */
-//     $(".hideme-nav,.hideme-portfolio").each(function (i) {
-//       var bottom_of_object = $(this).position().top + $(this).outerHeight();
-//       var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-//       /* If the object is completely visible in the window, fade it it */
-//       if (bottom_of_window > bottom_of_object / 1.2) {
-//         $(this).animate({ opacity: "1" }, 1000);
-//       }
-//     });
-//   });
-// });
